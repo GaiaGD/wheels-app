@@ -1,0 +1,21 @@
+DONE (but check again):
+
+- iata on form
+- reset all when checking other flights
+- plane moving (more accurate)
+- weather - celsius & farenheit
+- autocomplete (delete entries with no IATA code)
+- typography & layout on dashboard
+- only one dropdown open at time
+- mobile size to fit in screen
+
+
+THINGS TO DO
+
+- error handling - iata not detected
+
+- hide api keys
+
+- more flights
+
+- DESKTOP VERSION

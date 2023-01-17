@@ -220,7 +220,7 @@ let hidden = {display: "none"}
 
                 <div>
                     <p className="flightradar24">Need some inspiration?<br/> See all the flights in the air right now on 
-                    <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.flightradar24.com%2F&h=AT2Z8Uy-I9yUkq-9sIS5qokEPxW9S6OTCHmYe3hkjC7J_-aYRcspEJjI1VCpI-FE1WyhMx7O0P3N_RxkXaoxlkJmMMUCSeHEUrFvFksSC_0MrvWxQgdDv88D3-DTVbg-IXulCXpAekq-nQlTQm7xofK5k9dP2vD4ZS3hcNFfL_E">flightradar24.</a>
+                    <a href="https://www.google.com/search?q=flightradar">flightradar24.</a>
                     </p>
                 </div>
                 

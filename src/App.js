@@ -73,7 +73,7 @@ export default function App() {
   
         if (airlabData.response.length > 0 ){
 
-          console.log(airlabData.length)
+          console.log(airlabData.response)
 
           let IATAcode = airlabData.response[0].flight_iata
     

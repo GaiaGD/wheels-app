@@ -38,10 +38,7 @@ const searchDepartureAirports = (text) => {
             return airport.city.match(toFind) || airport.IATA.match(toFind) || airport.country.match(toFind)|| airport.name.match(toFind)
         })
         setAirportsDepartureMatches(matches)
-        console.log(props.formData.departureIATA)
-        // if(props.formData.departureIATA !== "")
-        //     {document.getElementById("form-dep-input").value = props.formData.departureIATA;
-        //     }            
+        console.log(props.formData.departureIATA)    
     }
 }
 
@@ -137,10 +134,8 @@ let hidden = {display: "none"}
                                                 <p>{airport.IATA}, {airport.name}</p>
                                                 <p>{airport.country}</p>
                                             </div>
-                                        )}
-                                        //  else {
-                                        //     null
-                                        // }
+                                    )}
+
                                 })}
                         </div>
                     </div>
@@ -175,10 +170,8 @@ let hidden = {display: "none"}
                                                 <p>{airport.IATA}, {airport.name}</p>
                                                 <p>{airport.country}</p>
                                             </div>  
-                                        )}
-                                        // else {
-                                        //     null
-                                        // }
+                                    )}
+
                             })}
                         </div>
                     </div>
@@ -196,13 +189,27 @@ let hidden = {display: "none"}
                     
                     <div className="dropdown" style={showDropdown.showDropdownAirline ? show : hidden} >
                         <div className="scroll">
-                            {airlinesMatches.map((airline, index) => (
-                                <div className="option" key={index}
-                                    onClick={() => {props.handleAirlineIata(airline.iata); setAirlinesMatches([]); changeInputAirlineValue(airline.name)}}>
-                                    <p>{airline.name}</p>
-                                    <p>{airline.country}</p>
-                                </div>  
-                            ))}
+                            {airlinesMatches.map((airline, index) => {
+
+                                let charIsLetter = (char) => {
+                                    if (typeof char !== 'string') {
+                                        return false;
+                                    }
+                                    return /^[a-zA-Z]+$/.test(char);
+                                }
+
+                                console.log(airline.iata)
+
+                                if(charIsLetter(airline.iata)){
+                                    return (
+                                        <div className="option" key={index}
+                                            onClick={() => {props.handleAirlineIata(airline.iata); setAirlinesMatches([]); changeInputAirlineValue(airline.name)}}>
+                                            <p>{airline.name}</p>
+                                            <p>{airline.country}</p>
+                                        </div>
+                                    )
+                                }
+                            })}
                         </div>
                     </div>
 

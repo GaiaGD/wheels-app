@@ -72,6 +72,9 @@ export default function App() {
       // catch undefined iata ?
   
         if (airlabData.response.length > 0 ){
+
+          console.log(airlabData.length)
+
           let IATAcode = airlabData.response[0].flight_iata
     
             const options = {
@@ -102,7 +105,7 @@ export default function App() {
           } else {
             console.log(formData)
             console.log(airlabData.response.length)
-            alert("No flight found")
+            alert("No flights found - Maybe is the same city but a different airport? Or is it the right airline? If you double checked, maybe there just no flight in the air at this time with this destination.")
           }
   
         } else {

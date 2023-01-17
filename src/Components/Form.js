@@ -190,6 +190,7 @@ let hidden = {display: "none"}
                     <div className="dropdown" style={showDropdown.showDropdownAirline ? show : hidden} >
                         <div className="scroll">
                             {airlinesMatches.map((airline, index) => {
+                                // only show airline entries with IATA code
 
                                 let charIsLetter = (char) => {
                                     if (typeof char !== 'string') {
@@ -197,8 +198,6 @@ let hidden = {display: "none"}
                                     }
                                     return /^[a-zA-Z]+$/.test(char);
                                 }
-
-                                console.log(airline.iata)
 
                                 if(charIsLetter(airline.iata)){
                                     return (
@@ -217,6 +216,12 @@ let hidden = {display: "none"}
 
                 <div className="button" onClick={props.handleSubmit}>
                     Track my flight
+                </div>
+
+                <div>
+                    <p className="flightradar24">Need some inspiration?<br/> See all the flights in the air right now on 
+                    <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.flightradar24.com%2F&h=AT2Z8Uy-I9yUkq-9sIS5qokEPxW9S6OTCHmYe3hkjC7J_-aYRcspEJjI1VCpI-FE1WyhMx7O0P3N_RxkXaoxlkJmMMUCSeHEUrFvFksSC_0MrvWxQgdDv88D3-DTVbg-IXulCXpAekq-nQlTQm7xofK5k9dP2vD4ZS3hcNFfL_E">flightradar24.</a>
+                    </p>
                 </div>
                 
             </div>

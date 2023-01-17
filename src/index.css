@@ -351,6 +351,17 @@ img.plane-icon {
   margin: 0;
 }
 
+.flightradar24 {
+  margin: 10% 5% 0 5%;
+  font-size: 15px;
+}
+
+.flightradar24 a {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+
 .fade-in-image {
   animation: fadeIn 0.5s;
   -webkit-animation: fadeIn 0.5s;

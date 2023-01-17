@@ -54,9 +54,9 @@ export default function App() {
     }))
     console.log(formData)
   }
-  
+
   let rapidapiData
-  
+
   async function handleSubmit() {
     if(formData.departureIATA !== "" && formData.arrivalIATA !== "" && formData.airlineCode !== ""){
   
@@ -71,51 +71,52 @@ export default function App() {
   
       // catch undefined iata ?
   
-      if (airlabData.response.length > 0 ){
-        let IATAcode = airlabData.response[0].flight_iata
-  
-          let rapidapiKey = process.env.REACT_APP_ACCESS_KEY_RAPIDAPI
-
-          const options = {
-            method: 'GET',
-            headers: {
-              'X-RapidAPI-Key': process.env.REACT_APP_ACCESS_KEY_RAPIDAPI,
-              'X-RapidAPI-Host': 'aerodatabox.p.rapidapi.com'
+        if (airlabData.response.length > 0 ){
+          let IATAcode = airlabData.response[0].flight_iata
+    
+            const options = {
+              method: 'GET',
+              headers: {
+                'X-RapidAPI-Key': process.env.REACT_APP_ACCESS_KEY_RAPIDAPI,
+                'X-RapidAPI-Host': 'aerodatabox.p.rapidapi.com'
+              }
             }
-          }
-  
-          let rapidapiAPI = `https://aerodatabox.p.rapidapi.com/flights/number/${IATAcode}/?withAircraftImage=false&withLocation=false`
-          const response2 = await fetch(rapidapiAPI, options)
-  
-          // solving the Unexpected end of JSON problem
-          try {
-            let rapidapiData = await response2.json()
-            console.log(rapidapiData)
-            setDataFromRapidApi(rapidapiData)
-            setForm(false)
-            setDashboard(true)
-  
-          } catch (err) {
-            // 👇️ SyntaxError: Unexpected end of JSON input
-            console.log('error', err)
-            alert("Oops, there seems to be a problem with your request. Try again or check later.")
+    
+            let rapidapiAPI = `https://aerodatabox.p.rapidapi.com/flights/number/${IATAcode}/?withAircraftImage=false&withLocation=false`
+            const response2 = await fetch(rapidapiAPI, options)
+    
+            // solving the Unexpected end of JSON problem
+            try {
+              let rapidapiData = await response2.json()
+              console.log(rapidapiData)
+              setDataFromRapidApi(rapidapiData)
+              setForm(false)
+              setDashboard(true)
+    
+            } catch (err) {
+              // 👇️ SyntaxError: Unexpected end of JSON input
+              console.log('error', err)
+              alert("Oops, there seems to be a problem with your request. Try again or check later.")
+            }
+    
+          } else {
+            console.log(formData)
+            console.log(airlabData.response.length)
+            alert("No flight found")
           }
   
         } else {
-          alert("Please fill in all the fields")
-        }
-  
-        } else {
+          console.log(formData)
           alert("Please fill in all the fields")
         }
   }
   
+    
   function getNewForm(){
     setDashboard(false)
     setFormData({ departureIATA: "", arrivalIATA: "", airlineCode: "" })
     setForm(true)
   }
-  
   
     return (
       <div className="App">
@@ -131,6 +132,7 @@ export default function App() {
               handleDepartureCode={handleDepartureCode}
               handleArrivalCode={handleArrivalCode}
               handleAirlineIata={handleAirlineIata}
+              getNewForm={getNewForm}
             />
         }
   

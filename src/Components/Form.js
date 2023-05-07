@@ -95,7 +95,7 @@ let hidden = {display: "none"}
         <div className="Form text-center fade-in-image">
             <div className="container">
                 <div className="logo">
-                    <img alt="logo" src="/assets/wheels-app-logo.gif"></img>
+                    <img alt="logo" src="./wheels-app-logo.gif"></img>
                 </div>
                 <div className="fields">
 

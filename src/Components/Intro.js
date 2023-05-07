@@ -6,10 +6,10 @@ export default function Intro(props){
         <div className="Intro text-center">
             <div className="container">
                 <div className="logo intro">
-                    <img alt="logo" src="/assets/wheels-app-logo.gif"></img>
+                    <img alt="logo" src="./wheels-app-logo.gif"></img>
                 </div>
                 <div>
-                    <img alt="logo" className="logotype" src="/assets/wa-logotype.svg"></img>
+                    <img alt="logo" className="logotype" src="./wa-logotype.svg"></img>
                 </div>
                 <div className="button" onClick={props.goToForm}>Let's go!</div>
             </div>

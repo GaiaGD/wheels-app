@@ -159,7 +159,7 @@ export default function Dashboard(props){
                 <div className="plane-icon">
                     <img alt="plane-icon" className="plane-icon moving-plane"
                     style={{ left: elapsedPercentage ? `${elapsedPercentage}%` : '95%'}}
-                    src="assets/plane-icon.svg"></img>
+                    src="./plane-icon.svg"></img>
                 </div>
 
                 <div className="flightcode text-center">
@@ -208,7 +208,7 @@ export default function Dashboard(props){
             </div>
 
             <div className="button text-center another-flight" onClick={props.getNewForm}>
-                <img alt="back to homepage" src="assets/go-back.svg"></img>
+                <img alt="back to homepage" src="./go-back.svg"></img>
                 <p>CHECK ANOTHER FLIGHT</p>
             </div>
 

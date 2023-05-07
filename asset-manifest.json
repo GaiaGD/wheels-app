@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wheels-app/static/css/main.6e6007bc.css",
+    "main.js": "/wheels-app/static/js/main.c79f6517.js",
+    "static/js/787.59dbeb78.chunk.js": "/wheels-app/static/js/787.59dbeb78.chunk.js",
+    "index.html": "/wheels-app/index.html",
+    "main.6e6007bc.css.map": "/wheels-app/static/css/main.6e6007bc.css.map",
+    "main.c79f6517.js.map": "/wheels-app/static/js/main.c79f6517.js.map",
+    "787.59dbeb78.chunk.js.map": "/wheels-app/static/js/787.59dbeb78.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e6007bc.css",
+    "static/js/main.c79f6517.js"
+  ]
+}

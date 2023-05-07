@@ -220,7 +220,7 @@ let hidden = {display: "none"}
 
                 <div>
                     <p className="flightradar24">Need some inspiration?<br/> See all the flights in the air right now on 
-                    <a href="https://www.google.com/search?q=flightradar">flightradar24.</a>
+                    <a target="_blank" href="https://www.google.com/search?q=flightradar">flightradar24.</a>
                     </p>
                 </div>
                 

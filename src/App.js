@@ -91,7 +91,7 @@ export default function App() {
             // solving the Unexpected end of JSON problem
             try {
               let rapidapiData = await response2.json()
-              console.log(rapidapiData)
+              console.log("rapidapiData: ", rapidapiData)
               setDataFromRapidApi(rapidapiData)
               setForm(false)
               setDashboard(true)

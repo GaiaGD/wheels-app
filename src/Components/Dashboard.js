@@ -16,6 +16,9 @@ export default function Dashboard(props){
     let airportDepartureCity = data[0].departure.airport.municipalityName
     let airportArrivalCity = data[0].arrival.airport.municipalityName
 
+    console.log(data[0].departure.scheduledTimeLocal)
+    console.log(data[0].departure.scheduledTime.local.substring(11, 16))
+
     React.useEffect(() => {
         // getting time total and time elapsed
         if(data[0].departure.scheduledTimeUtc && data[0].arrival.scheduledTimeUtc){
@@ -138,8 +141,8 @@ export default function Dashboard(props){
                     </div>
                     <div className="dep-info-right">
                         <div>
-                            {data[0].departure.scheduledTimeLocal && <h1>{(data[0].departure.scheduledTimeLocal).substring(11, 16)}</h1>}
-                            <p className={data[0].departure.actualTimeLocal ? "" : "unavailable"}>Actual: {data[0].departure.actualTimeLocal ? (data[0].departure.actualTimeLocal).substring(11, 16) : ""}</p>
+                            {data[0].departure.scheduledTime.local && <h1>{(data[0].departure.scheduledTime.local.substring(11, 16))}</h1>}
+                            {/* <p className={data[0].departure.actualTime.local ? "" : "unavailable"}>Actual: {data[0].departure.actualTime.local ? (data[0].departure.actualTime.local).substring(11, 16) : ""}</p> */}
                         </div>
                         <span className="line-divider"></span>
                         <div className="flex terminal-gate">
@@ -191,8 +194,8 @@ export default function Dashboard(props){
                     </div>
                     <div className="arr-info-right">
                         <div>
-                            {data[0].arrival.scheduledTimeLocal && <h1>{(data[0].arrival.scheduledTimeLocal).substring(11, 16)}</h1>}
-                            <p className={data[0].arrival.actualTimeLocal ? "" : "unavailable"}>Actual: {data[0].arrival.actualTimeLocal ? (data[0].arrival.actualTimeLocal).substring(11, 16) : ""}</p>
+                            {data[0].arrival.scheduledTime.local && <h1>{(data[0].arrival.scheduledTime.local).substring(11, 16)}</h1>}
+                            {/* <p className={data[0].arrival.actualTime.local ? "" : "unavailable"}>Actual: {data[0].arrival.actualTime.local ? (data[0].arrival.actualTime.local).substring(11, 16) : ""}</p> */}
                         </div>
                         <span className="line-divider"></span>
                         <div className="flex terminal-gate">

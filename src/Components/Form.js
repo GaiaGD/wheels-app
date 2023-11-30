@@ -12,6 +12,7 @@ const [airlinesMatches, setAirlinesMatches] = React.useState([])
 
 const [showDropdown, setShowDropdown] = React.useState({showDropdownDep: false, showDropdownArr: false, showDropdownAirline: false})
 
+console.log(props.formData)
 
 React.useEffect(() => {
     const loadAirports = async () => {

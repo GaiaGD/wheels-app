@@ -16,7 +16,6 @@ export default function Dashboard(props){
     let airportDepartureCity = data[0].departure.airport.municipalityName
     let airportArrivalCity = data[0].arrival.airport.municipalityName
 
-    console.log(data[0].departure.scheduledTimeLocal)
     console.log(data[0].departure.scheduledTime.local.substring(11, 16))
 
     React.useEffect(() => {

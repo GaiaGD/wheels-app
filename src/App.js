@@ -67,6 +67,7 @@ export default function App() {
   
       const response = await fetch(airlabAPI)
       const airlabData = await response.json()
+      console.log(airlabAPI)
       console.log("airlabData: ", airlabData)
   
       // catch undefined iata ?
